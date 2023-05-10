@@ -1327,6 +1327,7 @@ p.services-image_mobile {
   .service-image {
     display: none;
   }
+
   .service-text {
     margin-left: 0;
     border-radius: 10px;
