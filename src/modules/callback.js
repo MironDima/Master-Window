@@ -1,12 +1,12 @@
 const callback = () => {
 	const headerModal = document.querySelector('.header-modal');
 	const overlayModal = document.querySelector('.overlay');
+	const btn = document.querySelector('.button')
 
-	document.addEventListener('click', (e) => {
-		if (e.target.classList.contains('btn-warning')) {
+	btn.addEventListener('click', (e) => {
+		e.preventDefault()
 			overlayModal.style.display = 'block';
 			headerModal.style.display = 'block';
-		}
 	})
 
 	headerModal.addEventListener('click', (e) => {
@@ -15,7 +15,5 @@ const callback = () => {
 			headerModal.style.display = 'none';
 			}
 	})
-
-
 }
 export default callback
