@@ -7,6 +7,7 @@ import validation from './modules/validation';
 import sendForm from './modules/sendForm';
 import documents from './modules/documents';
 import scroll from './modules/scroll';
+import culculate from './modules/culculate';
 
 callback()
 slider()
@@ -18,7 +19,14 @@ timer({
 })
 validation()
 sendForm({
-	idForm:['form1','form2']
+	idForm: ['form1', 'form2'],
+	someElem: [
+		{
+			type: 'input',
+			id: 'total'
+		}
+	]
 })
 documents()
 scroll()
+culculate(100)

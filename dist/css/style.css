@@ -934,18 +934,6 @@ p.services-image_mobile {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
 }
 
-.document-overlay {
-  background: url("../images/zoom.png") no-repeat center rgba(79, 104, 110, 0.42);
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: opacity 0.3s linear;
-  -webkit-transition: opacity 0.3s linear;
-}
-
 #contacts {
   background-color: #00902a;
   color: #fff;
@@ -2025,7 +2013,8 @@ div.error {
   left: calc(50% - 209px);
   cursor: default;
 }
-.closeBlock{
+
+.closeBlock {
   position: absolute;
   width: 25px;
   height: 25px;
@@ -2034,6 +2023,7 @@ div.error {
   right: -1px;
   top: 0px;
 }
+
 .modal-close {
   position: absolute;
   right: 7px;
@@ -2044,12 +2034,29 @@ div.error {
   text-align: center;
   z-index: 1;
 }
-
 .modal-window {
   position: relative;
 }
-
 .img-modal {
   width: 100%;
   height: 100%;
 }
+
+.document-overlay {
+  background: url("../images/zoom.png") no-repeat center rgba(79, 104, 110, 0.42);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s linear;
+  -webkit-transition: opacity 0.3s linear;
+}
+
+.sertificate-document{
+  position: relative;
+  display: inline-block;
+}
+
+/* end doc modal */
