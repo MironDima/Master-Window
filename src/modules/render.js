@@ -1,7 +1,7 @@
 import { renderCommets } from "./renderCommets";
 const render = (data) => {
 	const blockComments = document.querySelector('.comments-container');
-	renderCommets(blockComments)
+	renderCommets(blockComments);
 	const commentsItem = blockComments.querySelectorAll('.comments-item');
 	const imgUser = blockComments.querySelectorAll('.review-user');
 	const nameUser = blockComments.querySelectorAll('.text-normal');
@@ -14,7 +14,6 @@ const render = (data) => {
 			console.log(firstRevies);
 			data.splice(data.length, 1, firstRevies)
 			console.log(data);
-
 			renderComments()
 		}, 10000)
 	}
@@ -23,7 +22,7 @@ const render = (data) => {
 		commentsItem.forEach((coment, index) => {
 			imgUser[index].textContent = ''
 			imgUser[index].insertAdjacentHTML('beforeend',
-				`<img src= "${data[index].image == '' ? defaultImg : data[index].image}" class="img-responsive avatar">`)
+				`<img src= "${data[index].image == '' ? defaultImg : data[index].image}" class="img-responsive avatar">`);
 			nameUser[index].innerHTML = data[index].author
 			reviewText[index].innerHTML = data[index].comment
 		})

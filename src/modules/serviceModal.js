@@ -21,5 +21,4 @@ const serviceModal = () => {
 		servicesModal.style.display = 'none';
 	})
 }
-
 export default serviceModal

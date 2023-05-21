@@ -5,14 +5,14 @@ const validation = () => {
 			input.addEventListener('blur', (e) => {
 				if(e.target.name === 'fio') {
 					const changeName = /[^a-zA-Zа-яА-ЯёЁ\s]/g
-					e.target.value = e.target.value.replace(changeName,'')
+					e.target.value = e.target.value.replace(changeName,'');
 					e.target.value = e.target.value.replace(/(\s|^)[a-zA-Zа-яА-ЯёЁ]/g, (str) => {
 						return	str.toUpperCase()
 					})
 				}
 				if(e.target.name === 'phone') {
 					const changePhone = /[^0-9\+]/g
-					e.target.value = e.target.value.replace(changePhone,'') 
+					e.target.value = e.target.value.replace(changePhone,'') ;
 				}
 			})
 		})

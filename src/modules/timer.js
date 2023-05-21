@@ -7,7 +7,7 @@ const timer = ({ deadline, blockId }) => {
 		const timerSecond = blockTimerId.querySelector('.count_4 > span');
 		const countdownBlock = blockTimerId.querySelector('.order-heading');
 		const btnForm = document.querySelectorAll('.order-form-button > button');
-		const action = document.createElement('div')
+		const action = document.createElement('div');
 		action.classList.add('action-block');
 
 		const getTimer = (deadline) => {
