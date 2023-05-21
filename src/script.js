@@ -16,7 +16,7 @@ slider()
 carusel()
 serviceModal()
 timer({
-	deadline: '18 may 2023',
+	deadline: '30 may 2023',
 	blockId: ['order_1', 'order_2'],
 })
 validation()
