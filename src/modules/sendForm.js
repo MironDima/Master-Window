@@ -1,6 +1,6 @@
 const sendForm = ({ idForm, someElem = [] }) => {
 	idForm.forEach(forms => {
-		const total = document.getElementById('total');
+		const culcBlock = document.querySelector('#calc');
 		const form = document.getElementById(forms);
 		let div = document.createElement('div');
 		div.classList.add('style');
@@ -38,6 +38,7 @@ const sendForm = ({ idForm, someElem = [] }) => {
 
 		const submitForm = () => {
 			const inputs = form.querySelectorAll('input');
+			const btnForm = form.querySelectorAll('button');
 			const formData = new FormData(form);
 			const formBody = {}
 
@@ -49,17 +50,18 @@ const sendForm = ({ idForm, someElem = [] }) => {
 			div.classList.remove('error');
 			div.textContent = loadText;
 
-			someElem.forEach(elem => {
-				const totalCulc = document.getElementById(elem.id)
-				console.log(totalCulc.value);
-				if(totalCulc.value > 0) {
-					if (elem.type === 'input') {
-						formBody[elem.id] = totalCulc.value
-					} else if (elem.type === 'block') {
-						formBody[elem.id] = totalCulc.textContent
+			if (culcBlock) {
+				someElem.forEach(elem => {
+					const totalCulc = document.getElementById(elem.id)
+					if (totalCulc.value > 0) {
+						if (elem.type === 'input') {
+							formBody[elem.id] = totalCulc.value
+						} else if (elem.type === 'block') {
+							formBody[elem.id] = totalCulc.textContent
+						}
 					}
-				}
-			})
+				})
+			}
 
 			if (validate(inputs)) {
 				sendData(formBody)
@@ -69,6 +71,9 @@ const sendForm = ({ idForm, someElem = [] }) => {
 							input.value = '';
 							input.style.border = '';
 							div.classList.remove('error');
+						})
+						btnForm.forEach(btn => {
+							btn.disabled = true;
 						})
 						setTimeout(() => {
 							div.textContent = '';

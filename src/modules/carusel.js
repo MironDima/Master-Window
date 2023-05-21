@@ -8,8 +8,6 @@ const carusel = () => {
 			prevEl: ".slider-button-prev",
 		},
 		loop: true,
-		
 	})
 }
-
 export default carusel

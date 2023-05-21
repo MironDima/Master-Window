@@ -8,14 +8,16 @@ import sendForm from './modules/sendForm';
 import documents from './modules/documents';
 import scroll from './modules/scroll';
 import culculate from './modules/culculate';
+import render from './modules/render';
+import getData from './modules/getData';
 
 callback()
 slider()
 carusel()
 serviceModal()
 timer({
-	deadline: '23 may 2023',
-	blockId: ['order_1', 'order_2']
+	deadline: '18 may 2023',
+	blockId: ['order_1', 'order_2'],
 })
 validation()
 sendForm({
@@ -30,3 +32,4 @@ sendForm({
 documents()
 scroll()
 culculate(100)
+getData('comments.json').then(data => render(data.comments))

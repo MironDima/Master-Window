@@ -1886,6 +1886,19 @@ input.error {
   background-color: rgba(0, 0, 0, 0.45);
 }
 
+.overlay-service {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
 .benefits-wrap {
   display: flex;
   justify-content: space-between;
@@ -2034,9 +2047,11 @@ div.error {
   text-align: center;
   z-index: 1;
 }
+
 .modal-window {
   position: relative;
 }
+
 .img-modal {
   width: 100%;
   height: 100%;
@@ -2054,9 +2069,15 @@ div.error {
   -webkit-transition: opacity 0.3s linear;
 }
 
-.sertificate-document{
+.sertificate-document {
   position: relative;
   display: inline-block;
 }
 
 /* end doc modal */
+.action-block {
+  text-align: center;
+  color: #ff8a17;
+  font-size: 22px;
+  font-weight: 600;
+}
