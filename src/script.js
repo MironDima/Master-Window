@@ -21,12 +21,13 @@ timer({
 })
 validation()
 sendForm({
-	idForm: ['form1', 'form2'],
+	idForm: ['form1', 'form2','form3','form4'],
 	someElem: [
 		{
 			type: 'input',
-			id: 'total'
-		}
+			id: 'total',
+			classService: '.service-button > a'
+		},
 	]
 })
 documents()

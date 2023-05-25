@@ -5,9 +5,9 @@ const sendForm = ({ idForm, someElem = [] }) => {
 		let div = document.createElement('div');
 		div.classList.add('style');
 		let succesText = 'Данные отправлены!';
-		let errorText = 'Ошибка!';
+		let errorText = `Ошибка!
+					Данные не валидны...`;
 		let loadText = 'Загрузка...';
-
 		const validate = (inputs) => {
 			let succes = true;
 			inputs.forEach(input => {
@@ -35,6 +35,15 @@ const sendForm = ({ idForm, someElem = [] }) => {
 				}
 			}).then(res => res.json())
 		}
+
+		const btnService = document.querySelectorAll('.service-button > a')
+		btnService.forEach(btn => {
+			btn.addEventListener('click', (e) => {
+				const nameService = btn.getAttribute('data-subject');
+				const inputSubject = document.querySelector('[name="subject"]')
+				inputSubject.value = nameService
+			})
+		})
 
 		const submitForm = () => {
 			const inputs = form.querySelectorAll('input');
@@ -81,7 +90,6 @@ const sendForm = ({ idForm, someElem = [] }) => {
 					})
 					.catch(error => div.textContent = errorText);
 			} else {
-				alert('Данные не валидны!');
 				div.classList.add('error')
 				div.textContent = errorText;
 			}

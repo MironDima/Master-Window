@@ -683,7 +683,7 @@
 							замерщика!</button></div>
 				</div>
 				<input type="hidden" name="page" value="Окна">
-				<input type="hidden" name="subject">
+				<!-- <input type="hidden" name="subject"> -->
 			</form>
 			<span class="help-block">Гарантируем 100% конфиденциальность. Ваша информация не будет
 				распространяться.</span>
@@ -696,13 +696,13 @@
 			<h2>Статус отправки формы:</h2>
 		</div>
 		<div class="box-modal_body">
-			<div class="modal-content"></div>
+			<div class="modal-content-body"></div>
 			<br /><br />
 			<a href="#" class="btn btn-success fancyClose">ok</a>
 		</div>
 	</div>
 
-	<div class="overlay">
+	<div class="overlay"></div>
 		<div class="header-modal header-modal--opened">
 			<div class="fancybox-skin" style="padding: 0px; width: auto; height: auto;">
 				<div class="fancybox-outer">
@@ -716,7 +716,7 @@
 							<div class="box-modal_body rf">
 								<p class="text-center">Оставьте, пожалуйста, заявку. Мы позвоним Вам в ближайшее время и
 									ответим на все вопросы!</p>
-								<form name="callback-form">
+								<form id="form3" name="callback-form"  class="form-horizontal">
 									<div class="form-group">
 										<input type="text" name="fio" class="form-control required"
 											placeholder="Ваше имя*">
@@ -739,7 +739,7 @@
 				</div><span title="Close" class="header-modal__close">x</span>
 			</div>
 		</div>
-	</div>
+	
 
 	<div class="overlay-service"></div>
 	<div class="services-modal services-modal--opened">
@@ -753,7 +753,7 @@
 						</div>
 						<div class="box-modal_body rf">
 							<p class="text-center">Оставьте заявку и специалист свяжется с Вами в ближайшее время!</p>
-							<form name="application-form">
+							<form id="form4" name="application-form" class="form-horizontal">
 								<div class="form-group">
 									<input type="text" name="fio" class="form-control required" placeholder="Ваше имя*">
 								</div>
@@ -766,7 +766,7 @@
 											class="btn btn-success feedback">Вызвать замерщика!</button></div>
 								</div>
 								<input type="hidden" name="page" value="Окна">
-								<input type="hidden" name="subject" value="Стандартные ПВХ-окна">
+								<input type="hidden" name="subject" value="">
 							</form>
 							<span class="help-block">Гарантируем 100% конфиденциальность. Ваша информация не будет
 								распространяться.</span>

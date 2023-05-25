@@ -11,9 +11,7 @@ const render = (data) => {
 	const deleteComments = () => {
 		 setInterval(() => {
 			let firstRevies = data.splice(data[0], 1)[0]
-			console.log(firstRevies);
 			data.splice(data.length, 1, firstRevies)
-			console.log(data);
 			renderComments()
 		}, 10000)
 	}
